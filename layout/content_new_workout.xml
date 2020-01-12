@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".NewWorkoutActivity"
+    tools:showIn="@layout/activity_new_workout">
+
+    <RelativeLayout
+        android:id="@+id/rootRL"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/start_activity_image"
+        android:alpha=".7">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/txtVw_WorkoutName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="NAME:"
+                        android:textSize="24dp"
+                        android:textColor="@color/colorFab"
+                        android:layout_marginRight="10dp"/>
+
+                    <EditText
+                        android:id="@+id/edtTxt_WorkoutName"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ems="15"
+                        android:textAlignment="center"
+                        android:inputType="text"
+                        android:background="@color/colorFab"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="30dp">
+                    <Button
+                        android:id="@+id/btn_TakePic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:text="ADD PIC"
+                        android:textSize="24dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_gravity="center_vertical"/>
+                    <ImageView
+                        android:id="@+id/imgVw_NewPicture"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        app:srcCompat="@mipmap/ic_launcher_round" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_horizontal">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/rdBtn_Circuit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CIRCUIT"
+                            android:textSize="20dp"
+                            android:textColor="@color/colorFab"
+                            android:buttonTint="@color/colorFab"
+                            android:layout_marginBottom="10dp"/>
+                        <RadioButton
+                            android:id="@+id/rdBtn_FreeWeight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="FREEWEIGHT"
+                            android:textSize="20dp"
+                            android:textColor="@color/colorFab"
+                            android:buttonTint="@color/colorFab"
+                            android:layout_marginBottom="10dp"/>
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+                    <Button
+                        android:id="@+id/btn_AddWorkout"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:text="ADD WORKOUT"
+                        android:textSize="24dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
